@@ -95,6 +95,12 @@
     <Compile Include="RjButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RjTextBox.Designer.vb">
+      <DependentUpon>RjTextBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RjTextBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -105,6 +111,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RjTextBox.resx">
+      <DependentUpon>RjTextBox.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
