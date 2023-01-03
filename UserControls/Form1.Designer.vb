@@ -22,10 +22,33 @@ Partial Class Form1
     'Не изменяйте ее в редакторе исходного кода.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.RjTextBox1 = New UserControls.RJTextBox()
         Me.RjButton3 = New UserControls.CustomControls.RJControls.RJButton()
         Me.RjButton2 = New UserControls.CustomControls.RJControls.RJButton()
         Me.RjButton1 = New UserControls.CustomControls.RJControls.RJButton()
+        Me.RjTextBox2 = New UserControls.RJTextBox()
         Me.SuspendLayout()
+        '
+        'RjTextBox1
+        '
+        Me.RjTextBox1.BackColor = System.Drawing.Color.White
+        Me.RjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue
+        Me.RjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink
+        Me.RjTextBox1.BorderRadius = 5
+        Me.RjTextBox1.BorderSize = 2
+        Me.RjTextBox1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.RjTextBox1.Location = New System.Drawing.Point(45, 58)
+        Me.RjTextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.RjTextBox1.Multiline = False
+        Me.RjTextBox1.Name = "RjTextBox1"
+        Me.RjTextBox1.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.RjTextBox1.PasswordChar = False
+        Me.RjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray
+        Me.RjTextBox1.PlaceholderText = "PlaseHolder"
+        Me.RjTextBox1.Size = New System.Drawing.Size(250, 34)
+        Me.RjTextBox1.TabIndex = 3
+        Me.RjTextBox1.Texts = ""
+        Me.RjTextBox1.UnderlinedStyle = False
         '
         'RjButton3
         '
@@ -87,17 +110,40 @@ Partial Class Form1
         Me.RjButton1.TextColor = System.Drawing.Color.White
         Me.RjButton1.UseVisualStyleBackColor = False
         '
+        'RjTextBox2
+        '
+        Me.RjTextBox2.BackColor = System.Drawing.Color.White
+        Me.RjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue
+        Me.RjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink
+        Me.RjTextBox2.BorderRadius = 5
+        Me.RjTextBox2.BorderSize = 2
+        Me.RjTextBox2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.RjTextBox2.Location = New System.Drawing.Point(45, 104)
+        Me.RjTextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.RjTextBox2.Multiline = False
+        Me.RjTextBox2.Name = "RjTextBox2"
+        Me.RjTextBox2.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.RjTextBox2.PasswordChar = False
+        Me.RjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray
+        Me.RjTextBox2.PlaceholderText = "PlaseHolder"
+        Me.RjTextBox2.Size = New System.Drawing.Size(250, 34)
+        Me.RjTextBox2.TabIndex = 4
+        Me.RjTextBox2.Texts = ""
+        Me.RjTextBox2.UnderlinedStyle = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(610, 397)
+        Me.Controls.Add(Me.RjTextBox2)
+        Me.Controls.Add(Me.RjTextBox1)
         Me.Controls.Add(Me.RjButton3)
         Me.Controls.Add(Me.RjButton2)
         Me.Controls.Add(Me.RjButton1)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -106,5 +152,8 @@ Partial Class Form1
     Friend WithEvents RjButton1 As UserControls.CustomControls.RJControls.RJButton
     Friend WithEvents RjButton2 As UserControls.CustomControls.RJControls.RJButton
     Friend WithEvents RjButton3 As UserControls.CustomControls.RJControls.RJButton
+    Friend WithEvents RjTextBox1 As UserControls.RJTextBox
+    Friend WithEvents RjTextBox2 As UserControls.RJTextBox
+   
 
 End Class
