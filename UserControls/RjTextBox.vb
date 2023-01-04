@@ -14,11 +14,11 @@ Partial Public Class RJTextBox
     Inherits UserControl
 
     Private _borderColor As Color = Color.MediumSlateBlue
-    Private _borderFocusColor As Color = Color.HotPink
+    Private _borderFocusColor As Color = Color.DarkSlateBlue
     Private _borderSize As Integer = 2
     Private _underlinedStyle As Boolean = False
     Private isFocused As Boolean = False
-    Private _borderRadius As Integer = 0
+    Private _borderRadius As Integer = 5
     Private _placeholderColor As Color = Color.DarkGray
     Private _placeholderText As String = ""
     Private isPlaceholder As Boolean = False
@@ -27,6 +27,7 @@ Partial Public Class RJTextBox
 
     Public Sub New()
         InitializeComponent()
+        PlaceholderText = ""
     End Sub
 
     <Category("RJ Code Advance")>
@@ -94,6 +95,11 @@ Partial Public Class RJTextBox
         End Get
         Set(ByVal value As Boolean)
             textBox1.Multiline = value
+            If value = True Then
+                textBox1.ScrollBars = ScrollBars.Vertical
+            Else
+                textBox1.ScrollBars = ScrollBars.None
+            End If
         End Set
     End Property
 
@@ -179,7 +185,7 @@ Partial Public Class RJTextBox
             Return _PlaceholderText
         End Get
         Set(ByVal value As String)
-            _placeholderText = value
+            _placeholderText = value.Trim
             Label1.Text = ""
             SetPlaceholder()
         End Set
@@ -313,19 +319,19 @@ Partial Public Class RJTextBox
 
     End Sub
 
-    Private Sub textBox1_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub textBox1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles textBox1.Click
         Me.OnClick(e)
     End Sub
 
-    Private Sub textBox1_MouseEnter(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub textBox1_MouseEnter(ByVal sender As Object, ByVal e As EventArgs) Handles textBox1.MouseEnter
         Me.OnMouseEnter(e)
     End Sub
 
-    Private Sub textBox1_MouseLeave(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub textBox1_MouseLeave(ByVal sender As Object, ByVal e As EventArgs) Handles textBox1.MouseLeave
         Me.OnMouseLeave(e)
     End Sub
 
-    Private Sub textBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+    Private Sub textBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles textBox1.KeyPress
         Me.OnKeyPress(e)
     End Sub
 

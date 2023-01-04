@@ -162,11 +162,12 @@ Namespace CustomControls.RJControls
             Me.Invalidate()
         End Sub
 
-        Private Sub Button_Resize(ByVal sender As Object, ByVal e As EventArgs)
+        Private Sub Button_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
             If _borderRadius > Me.Height Then _borderRadius = Me.Height
         End Sub
         Private _h = Me.Width, _l = Me.Width, _t = Me.Top, l = Me.Left
         Private Async Sub Button_MouseHover(ByVal sender As Object, ByVal e As EventArgs)
+            If _effect = False Then Return
             BorderSize = 0
             BorderColor = Color.Black
             For i = 0 To 5
@@ -191,6 +192,7 @@ Namespace CustomControls.RJControls
         End Sub
 
         Private Async Sub Button_MouseLeave(ByVal sender As Object, ByVal e As EventArgs) Handles Me.MouseLeave
+            If _effect = False Then Return
             For i = 0 To 5
                 'Await Task.Delay(1)
                 'If Me.Width > _l Then Me.Width -= 1
