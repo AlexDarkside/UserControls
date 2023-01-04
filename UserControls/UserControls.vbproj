@@ -95,6 +95,15 @@
     <Compile Include="RjButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RjComboBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RjProgressBar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RjRadioButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RjTextBox.Designer.vb">
       <DependentUpon>RjTextBox.vb</DependentUpon>
     </Compile>
