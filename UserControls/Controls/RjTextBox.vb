@@ -9,6 +9,42 @@ Imports System.Threading.Tasks
 Imports System.Windows.Forms
 Imports System.Drawing.Drawing2D
 
+''' <summary>
+''' Тип значение которе можно ввести в TextBox
+''' </summary>
+''' <remarks></remarks>
+Public Enum TextType
+    ''' <summary>
+    ''' Получает все символы
+    ''' </summary>
+    ''' <remarks></remarks>
+    StringValue
+
+    ''' <summary>
+    ''' Можно ввести положительние числа и так же отрицательние числа
+    ''' </summary>
+    ''' <remarks></remarks>
+    InegerValue
+
+    ''' <summary>
+    ''' Можно ввести положительние значение с плявяющей точкой(Double)   и так же отрицательние числа
+    ''' </summary>
+    ''' <remarks></remarks>
+    DoubleValue
+
+    ''' <summary>
+    '''Можно ввести только положительние числа
+    ''' </summary>
+    ''' <remarks></remarks>
+    PositiveIngegerValue
+
+    ''' <summary>
+    ''' Можно ввести только положительние значение с плявяющей точкой(Double)
+    ''' </summary>
+    ''' <remarks></remarks>
+    PositiveDoubleValue
+End Enum
+
 <DefaultEvent("_TextChanged")>
 Partial Public Class RJTextBox
     Inherits UserControl
@@ -24,11 +60,22 @@ Partial Public Class RJTextBox
     Private isPlaceholder As Boolean = False
     Private isPasswordChar As Boolean = False
     Public Event _TextChanged As EventHandler
+    Private _textValueType As TextType = TextType.StringValue
 
     Public Sub New()
         InitializeComponent()
         PlaceholderText = ""
     End Sub
+
+    <Category("RJ Code Advance")>
+    Public Property TextValueType As TextType
+        Get
+            Return _textValueType
+        End Get
+        Set(value As TextType)
+            _textValueType = value
+        End Set
+    End Property
 
     <Category("RJ Code Advance")>
     Public Property BorderColor As Color
@@ -333,6 +380,18 @@ Partial Public Class RJTextBox
 
     Private Sub textBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles textBox1.KeyPress
         Me.OnKeyPress(e)
+        Select Case TextValueType
+            Case TextType.StringValue
+
+            Case TextType.DoubleValue
+                DoubleValueInControlKeyPress(sender, e)
+            Case TextType.InegerValue
+                IntegerValueInControlKeyPress(sender, e)
+            Case TextType.PositiveIngegerValue
+                PositivIntegerValueInControlKeyPress(sender, e)
+            Case TextType.DoubleValue
+                PositiveDoubleValueInControlKeyPress(sender, e)
+        End Select
     End Sub
 
     Private Sub textBox1_Enter(ByVal sender As Object, ByVal e As EventArgs) Handles textBox1.Enter, Label1.Enter

@@ -35,6 +35,8 @@ Partial Class Form1
         Me.RjTextBox3 = New UserControls.RJTextBox()
         Me.RjTextBox2 = New UserControls.RJTextBox()
         Me.RjTextBox1 = New UserControls.RJTextBox()
+        Me.RjTextBox5 = New UserControls.RJTextBox()
+        Me.RjTextBox6 = New UserControls.RJTextBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class Form1
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Controls.Add(Me.RjTextBox3)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 189)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 294)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(852, 208)
         Me.FlowLayoutPanel1.TabIndex = 5
@@ -190,6 +192,7 @@ Partial Class Form1
         Me.RjTextBox4.Size = New System.Drawing.Size(250, 34)
         Me.RjTextBox4.TabIndex = 8
         Me.RjTextBox4.Texts = ""
+        Me.RjTextBox4.TextValueType = UserControls.TextType.StringValue
         Me.RjTextBox4.UnderlinedStyle = False
         '
         'RjTextBox3
@@ -211,6 +214,7 @@ Partial Class Form1
         Me.RjTextBox3.Size = New System.Drawing.Size(250, 34)
         Me.RjTextBox3.TabIndex = 8
         Me.RjTextBox3.Texts = ""
+        Me.RjTextBox3.TextValueType = UserControls.TextType.StringValue
         Me.RjTextBox3.UnderlinedStyle = False
         '
         'RjTextBox2
@@ -232,6 +236,7 @@ Partial Class Form1
         Me.RjTextBox2.Size = New System.Drawing.Size(183, 143)
         Me.RjTextBox2.TabIndex = 4
         Me.RjTextBox2.Texts = ""
+        Me.RjTextBox2.TextValueType = UserControls.TextType.StringValue
         Me.RjTextBox2.UnderlinedStyle = False
         '
         'RjTextBox1
@@ -253,14 +258,61 @@ Partial Class Form1
         Me.RjTextBox1.Size = New System.Drawing.Size(250, 34)
         Me.RjTextBox1.TabIndex = 3
         Me.RjTextBox1.Texts = ""
+        Me.RjTextBox1.TextValueType = UserControls.TextType.StringValue
         Me.RjTextBox1.UnderlinedStyle = False
+        '
+        'RjTextBox5
+        '
+        Me.RjTextBox5.BackColor = System.Drawing.Color.White
+        Me.RjTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue
+        Me.RjTextBox5.BorderFocusColor = System.Drawing.Color.DarkSlateBlue
+        Me.RjTextBox5.BorderRadius = 5
+        Me.RjTextBox5.BorderSize = 2
+        Me.RjTextBox5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.RjTextBox5.Location = New System.Drawing.Point(13, 188)
+        Me.RjTextBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.RjTextBox5.Multiline = False
+        Me.RjTextBox5.Name = "RjTextBox5"
+        Me.RjTextBox5.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.RjTextBox5.PasswordChar = False
+        Me.RjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray
+        Me.RjTextBox5.PlaceholderText = "DoubleValue"
+        Me.RjTextBox5.Size = New System.Drawing.Size(250, 34)
+        Me.RjTextBox5.TabIndex = 15
+        Me.RjTextBox5.Texts = ""
+        Me.RjTextBox5.TextValueType = UserControls.TextType.DoubleValue
+        Me.RjTextBox5.UnderlinedStyle = False
+        '
+        'RjTextBox6
+        '
+        Me.RjTextBox6.BackColor = System.Drawing.Color.White
+        Me.RjTextBox6.BorderColor = System.Drawing.Color.MediumSlateBlue
+        Me.RjTextBox6.BorderFocusColor = System.Drawing.Color.DarkSlateBlue
+        Me.RjTextBox6.BorderRadius = 5
+        Me.RjTextBox6.BorderSize = 2
+        Me.RjTextBox6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.RjTextBox6.Location = New System.Drawing.Point(13, 230)
+        Me.RjTextBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.RjTextBox6.Multiline = False
+        Me.RjTextBox6.Name = "RjTextBox6"
+        Me.RjTextBox6.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.RjTextBox6.PasswordChar = False
+        Me.RjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray
+        Me.RjTextBox6.PlaceholderText = "PositiveInegerValue"
+        Me.RjTextBox6.Size = New System.Drawing.Size(250, 34)
+        Me.RjTextBox6.TabIndex = 16
+        Me.RjTextBox6.Texts = ""
+        Me.RjTextBox6.TextValueType = UserControls.TextType.PositiveIngegerValue
+        Me.RjTextBox6.UnderlinedStyle = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(852, 397)
+        Me.ClientSize = New System.Drawing.Size(852, 502)
+        Me.Controls.Add(Me.RjTextBox6)
+        Me.Controls.Add(Me.RjTextBox5)
         Me.Controls.Add(Me.RjProgressBar1)
         Me.Controls.Add(Me.RjRadioButton3)
         Me.Controls.Add(Me.RjRadioButton2)
@@ -298,6 +350,8 @@ Partial Class Form1
     Friend WithEvents RjRadioButton2 As UserControls.RJRadioButton
     Friend WithEvents RjRadioButton3 As UserControls.RJRadioButton
     Friend WithEvents RjProgressBar1 As UserControls.RJProgressBar
+    Friend WithEvents RjTextBox5 As UserControls.RJTextBox
+    Friend WithEvents RjTextBox6 As UserControls.RJTextBox
    
 
 End Class
