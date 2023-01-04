@@ -1,14 +1,13 @@
-﻿Imports UserControls.CustomControls.RJControls
-
+﻿
 Public Class Form1
 
-    Private Sub RjButton2_MouseHover(sender As Object, e As EventArgs) Handles RjButton2.MouseHover
+    Private Sub RjButton2_MouseHover(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'CreateButton()
-        'CreateTextbox()
+        CreateTextbox()
     End Sub
 
     Async Sub CreateButton()
@@ -29,6 +28,11 @@ Public Class Form1
             Await Task.Delay(100)
             'tx.Select()
             Label2.Text = i
+            RjProgressBar1.Value = i
+            If i > 50 Then
+                RjProgressBar1.ForeBackColor = Color.Red
+                RjProgressBar1.SliderColor = Color.Red
+            End If
         Next
     End Sub
 End Class
